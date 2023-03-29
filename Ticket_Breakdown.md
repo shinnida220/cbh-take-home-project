@@ -29,6 +29,7 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
   - The new field 'customId' is nullable and has a maximum length of 50 characters.
 
 - **Effort Estimate**:
+
   2.5 hours
 
 - **Implementation Details**:
@@ -39,61 +40,73 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 ### Ticket 2: Update the Shifts table to use Custom Agent IDs
 
 - **Description**:
+
   The Shifts table is to updated to use the customId field from the Agents table when generating reports.
 
 - **Acceptance Criteria**:
-  When generating reports, the customId field is used in place of the internal database id.
-  The internal database id is still stored in the Shifts table, but not used in reports generation.
+
+  - When generating reports, the customId field is used in place of the internal database id.
+  - The internal database id is still stored in the Shifts table, but not used in reports generation.
 
 - **Effort Estimate**:
+
   3.5 hours
 
 - **Implementation Details**:
-  I will modify the Shifts table schema in the database to store both the customId and internal id fields.
-  I will update the `getShiftsByFacility` function to retrieve the customId field instead of the internal id.
-  I will update the `generateReport` function to use the customId field when generating the report.
+  - I will modify the Shifts table schema in the database to store both the customId and internal id fields.
+  - I will update the `getShiftsByFacility` function to retrieve the customId field instead of the internal id.
+  - I will update the `generateReport` function to use the customId field when generating the report.
 
 ### Ticket 3: Add Custom Agent ID Input Field to Facility UI
 
 - **Description**:
+
   A new input field is to be added to the Facility UI to allow Facilities to enter custom ids for Agents they work with. This should be saved in the customId field.
 
 - **Acceptance Criteria**:
-  A new input field is added to the Facility UI for entering custom ids.
-  When custom ids are entered, they are saved to the Agent table's customId field.
-  The length of the input field must not exceed a maximum of 50 characters.
+
+  - A new input field is added to the Facility UI for entering custom ids.
+  - When custom ids are entered, they are saved to the Agent table's customId field.
+  - The length of the input field must not exceed a maximum of 50 characters.
 
 - **Effort Estimate**:
+
   4.5 hours
 
 - **Implementation Details**:
-  I will add a new input field to the Facility UI for entering custom ids.
-  I will then update the Facility controller to retrieve and save the customId field when it is entered
+  - I will add a new input field to the Facility UI for entering custom ids.
+  - I will then update the Facility controller to retrieve and save the customId field when it is entered
 
 ### Ticket 4: Update Report PDF to include Custom Agent IDs
 
 - **Description**:
+
   The `generateReport` function is to be updated to include the customId field in the report PDF.
 
 - **Acceptance Criteria**:
+
   The report PDF includes the customId field for each Agent worked in the given quarter, including other metadata about the Agent assigned to each
 
 - **Effort Estimate**:
+
   2 hours
 
 - **Implementation Details**:
-  I will modify the `generateReport` function to include the customId field in the report PDF
+  - I will modify the `generateReport` function to include the customId field in the report PDF
 
 ### Ticket 5: Update API Documentation
 
 - **Description**:
+
   The API documentation is to updated to reflect the new customId field for Agents.
 
 - **Acceptance Criteria**:
-  The API documentation must include the new customId field in the response for `getShiftsByFacility` function
+
+  - The API documentation must include the new customId field in the response for `getShiftsByFacility` function
 
 - **Effort Estimate**:
+
   1 hour
 
 - **Implementation Details**:
-  I will update the API documentation to include the new customId field in the response for `getShiftsByFacility` function
+  - I will update the API documentation to include the new customId field in the response for `getShiftsByFacility` function
