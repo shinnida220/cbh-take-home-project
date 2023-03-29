@@ -22,17 +22,18 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
   Add a new field to the Agent table in the database to allow Facilities to save custom ids for Agents they work with.
 
 - **Acceptance Criteria**:
-  A new field 'customId' is added to the Agent table.
-  The new field 'customId' is included in the API response for the getShiftsByFacility function.
-  The new field 'customId' is nullable and has a maximum length of 50 characters.
+
+  - A new field 'customId' is added to the Agent table.
+  - The new field 'customId' is included in the API response for the `getShiftsByFacility` function.
+  - The new field 'customId' is nullable and has a maximum length of 50 characters.
 
 - **Effort Estimate**:
   2.5 hours
 
 - **Implementation Details**:
-  I will modify the Agent table schema in the database to add the new customId field.
-  I will then update the agent model and agent controller to include the new field in the response.
-  Finally I will update the API documentation to reflect the new customId field
+  - I will modify the Agent table schema in the database to add the new customId field.
+  - I will then update the agent model and agent controller to include the new field in the response.
+  - Finally I will update the API documentation to reflect the new customId field.
 
 ### Ticket 2: Update the Shifts table to use Custom Agent IDs
 
