@@ -22,36 +22,37 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
   Add a new field to the Agent table in the database to allow Facilities to save custom ids for Agents they work with.
 
 - **Acceptance Criteria**:
-  A new field 'customId' is added to the Agent table
-  The new field is nullable and has a maximum length of 50 characters
-  The new field is included in the API response for the getShiftsByFacility function
+  A new field 'customId' is added to the Agent table.
+  The new field 'customId' is included in the API response for the getShiftsByFacility function.
+  The new field 'customId' is nullable and has a maximum length of 50 characters.
 
 - **Effort Estimate**:
-  2 hours
+  2.5 hours
 
-Implementation Details:
+- **Implementation Details**:
+  I will modify the Agent table schema in the database to add the new customId field.
+  I will then update the agent model and agent controller to include the new field in the response.
+  Finally I will update the API documentation to reflect the new customId field
 
-Modify the Agent table schema in the database to add the new customId field
-Update the agent model and agent controller to include the new field in the response
-Update the API documentation to reflect the new field
+### Ticket 2: Update the Shifts table to use Custom Agent IDs
 
-Ticket 2: Update Shifts table to use Custom Agent IDs
-Description:
-Update the Shifts table to use the customId field from the Agents table when generating reports.
+- **Description**:
+  The Shifts table is to updated to use the customId field from the Agents table when generating reports.
 
-Acceptance Criteria:
+- **Acceptance Criteria**:
+  When generating reports, the customId field is used in place of the internal database id.
+  The internal database id is still stored in the Shifts table, but not used in reports generation.
 
-When generating reports, the customId field is used in place of the internal database id
-The internal database id is still stored in the Shifts table, but not used in reports
-Effort Estimate:
-3 hours
+- **Effort Estimate**:
+  3.5 hours
 
-Implementation Details:
+- **Implementation Details**:
+  I will modify the Shifts table schema in the database to store both the customId and internal id fields.
+  I will update the `getShiftsByFacility` function to retrieve the customId field instead of the internal id.
+  I will update the `generateReport` function to use the customId field when generating the report.
 
-Modify the Shifts table schema in the database to store both the customId and internal id fields
-Update the getShiftsByFacility function to retrieve the customId field instead of the internal id
-Update the generateReport function to use the customId field when generating the report
-Ticket 3: Add Custom Agent ID Input Field to Facility UI
+### Ticket 3: Add Custom Agent ID Input Field to Facility UI
+
 Description:
 Add a new input field to the Facility UI to allow Facilities to enter custom ids for Agents they work with.
 
