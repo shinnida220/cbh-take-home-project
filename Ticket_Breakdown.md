@@ -53,44 +53,45 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 
 ### Ticket 3: Add Custom Agent ID Input Field to Facility UI
 
-Description:
-Add a new input field to the Facility UI to allow Facilities to enter custom ids for Agents they work with.
+- **Description**:
+  A new input field is to be added to the Facility UI to allow Facilities to enter custom ids for Agents they work with. This should be saved in the customId field.
 
-Acceptance Criteria:
+- **Acceptance Criteria**:
+  A new input field is added to the Facility UI for entering custom ids.
+  When custom ids are entered, they are saved to the Agent table's customId field.
+  The length of the input field must not exceed a maximum of 50 characters.
 
-A new input field is added to the Facility UI for entering custom ids
-The input field has a maximum length of 50 characters
-When custom ids are entered, they are saved to the Agent table's customId field
-Effort Estimate:
-4 hours
+- **Effort Estimate**:
+  4.5 hours
 
-Implementation Details:
+- **Implementation Details**:
+  I will add a new input field to the Facility UI for entering custom ids.
+  I will then update the Facility controller to retrieve and save the customId field when it is entered
 
-Add a new input field to the Facility UI for entering custom ids
-Update the Facility controller to retrieve and save the customId field when it is entered
-Ticket 4: Update Report PDF to include Custom Agent IDs
-Description:
-Update the generateReport function to include the customId field in the report PDF.
+### Ticket 4: Update Report PDF to include Custom Agent IDs
 
-Acceptance Criteria:
+- **Description**:
+  The `generateReport` function is to be updated to include the customId field in the report PDF.
 
-The report PDF includes the customId field for each Agent worked in the given quarter
-Effort Estimate:
-2 hours
+- **Acceptance Criteria**:
+  The report PDF includes the customId field for each Agent worked in the given quarter, including other metadata about the Agent assigned to each
 
-Implementation Details:
+- **Effort Estimate**:
+  2 hours
 
-Modify the generateReport function to include the customId field in the report PDF
-Ticket 5: Update API Documentation
-Description:
-Update the API documentation to reflect the new customId field for Agents.
+- **Implementation Details**:
+  I will modify the `generateReport` function to include the customId field in the report PDF
 
-Acceptance Criteria:
+### Ticket 5: Update API Documentation
 
-The API documentation includes the new customId field in the response for getShiftsByFacility function
-Effort Estimate:
-1 hour
+- **Description**:
+  The API documentation is to updated to reflect the new customId field for Agents.
 
-Implementation Details:
+- **Acceptance Criteria**:
+  The API documentation must include the new customId field in the response for `getShiftsByFacility` function
 
-Update the API documentation to include the new customId field in the response for getShiftsByFacility function
+- **Effort Estimate**:
+  1 hour
+
+- **Implementation Details**:
+  I will update the API documentation to include the new customId field in the response for `getShiftsByFacility` function
